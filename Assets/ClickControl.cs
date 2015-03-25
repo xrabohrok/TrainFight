@@ -5,7 +5,7 @@ public class ClickControl : MonoBehaviour
 {
     public bool ValidPoint { get { return _valid; } private set { _valid = value; } }
     public Vector3 LastGoodPoint { get; set; }
-    public GameObject ThingClicked { get; set; }
+    public GameObject ThingHovered { get; set; }
     public Vector3 ClickedPoint { get; set; }
     public List<string> LimitToLayerNamed;
 
@@ -33,7 +33,7 @@ public class ClickControl : MonoBehaviour
         if (Physics.Raycast(ray, out infoOut, 500, layerMask))
         {
             LastGoodPoint = infoOut.point;
-            ThingClicked = infoOut.collider.gameObject;
+            ThingHovered = infoOut.collider.gameObject;
             ClickedPoint = infoOut.point;
             _valid = true;
         }

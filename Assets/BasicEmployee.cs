@@ -1,1 +1,0 @@
-﻿using UnityEngine;public class BasicEmployeeMaster : MonoBehaviour{    private ClickControl _clickControl;    // Use this for initialization	void Start ()	{        _clickControl = new ClickControl();	}    // Update is called once per frame	void Update ()	{	}}

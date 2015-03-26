@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-
-namespace Assets.HotSpot
+﻿namespace Assets.HotSpot
 {
-    public class Hotspot : MonoBehaviour
+    public interface IHotspot
     {
+        void HoverReaction();
+        void ClickReaction();
     }
 }

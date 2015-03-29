@@ -8,17 +8,16 @@ namespace Assets.Helpers
         public bool ValidPoint { get { return _valid; } private set { _valid = value; } }
         public Vector3 LastGoodPoint { get; set; }
         public GameObject ThingHovered { get; set; }
-        public Vector3 ClickedPoint { get; set; }
         public List<string> LimitToLayerNamed;
 
         bool _valid = false;
 
-        void Start()
+        public void Start()
         {
         }
 
         // Update is called once per frame
-        void Update()
+        public void Update()
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit infoOut;
@@ -36,7 +35,6 @@ namespace Assets.Helpers
             {
                 LastGoodPoint = infoOut.point;
                 ThingHovered = infoOut.collider.gameObject;
-                ClickedPoint = infoOut.point;
                 _valid = true;
             }
             else

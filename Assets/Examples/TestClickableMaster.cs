@@ -1,18 +1,18 @@
 ﻿using Assets.HotSpot;
 using UnityEngine;
 
-namespace Assets
+namespace Assets.Examples
 {
-    [RequireComponent(typeof(HotSpotMaster))]
-    public class TestMaster : MonoBehaviour
+    [RequireComponent(typeof(Clickable))]
+    public class TestClickableMaster : MonoBehaviour
     {
 
-        private HotSpotMaster _slaveDriver;
+        private Clickable _slaveDriver;
 
         // Use this for initialization
         public void Start ()
         {
-            _slaveDriver = this.gameObject.GetComponent<HotSpotMaster>();
+            _slaveDriver = this.gameObject.GetComponent<Clickable>();
             if (_slaveDriver == null)
                 throw new System.NullReferenceException();
         }

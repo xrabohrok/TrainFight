@@ -1,6 +1,6 @@
 ﻿namespace Assets.HotSpot
 {
-    public interface IHotspot
+    public interface IClickable
     {
         void HoverReaction();
         void ClickReaction();

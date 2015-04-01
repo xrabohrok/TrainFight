@@ -9,7 +9,7 @@ namespace Assets.HotSpot
     /// </summary>
     
     [RequireComponent(typeof(ClickControl))]
-    public class HotSpotMaster : MonoBehaviour
+    public class Clickable : MonoBehaviour
     {
         private ClickControl _clickControl;
 
@@ -30,9 +30,9 @@ namespace Assets.HotSpot
         /// </summary>
         public void Update ()
         {
-            IHotspot thing = null;
+            IClickable thing = null;
             if(_clickControl.ValidPoint)
-                thing = _clickControl.ThingHovered.GetComponent<IHotspot>();
+                thing = _clickControl.ThingHovered.GetComponent<IClickable>();
             if (thing != null)
             {
                 thing.HoverReaction();

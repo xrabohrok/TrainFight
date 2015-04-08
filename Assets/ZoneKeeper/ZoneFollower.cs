@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace Assets.ZoneKeeper
 {
-    [RequireComponent(typeof(Clickable))]
     public class ZoneFollower : MonoBehaviour
     {
 
         public GameObject CurrentZone;
+        public ClickEventDelegator ClickEventDelegator;
         public float DistanceVariations = 1f;
 
         private Zone _attachedZone;
-        private Clickable _clickable;
+        private IZoneFollowerBehavior _behaviors;
 
         // Use this for initialization
         public void Start ()
@@ -22,10 +22,10 @@ namespace Assets.ZoneKeeper
                 if (_attachedZone == null)
                     CurrentZone = null;
             }
-            _clickable = GetComponent<Clickable>();
+            ClickEventDelegator = GetComponent<ClickEventDelegator>();
+            _behaviors = GetComponent<IZoneFollowerBehavior>();
         }
 	
-        // Update is called once per frame
         public void Update ()
         {
             var here = this.gameObject.transform.position;
@@ -34,7 +34,7 @@ namespace Assets.ZoneKeeper
             if (distance > DistanceVariations)
             {
                 var lookAtPost = new Vector3(position.x, here.y, position.z);
-                this.gameObject.transform.LookAt(lookAtPost,Vector3.up);
+                _behaviors.AwayFromZone(lookAtPost, this);
             }
         }
     }

@@ -9,7 +9,7 @@ namespace Assets.HotSpot
     /// </summary>
     
     [RequireComponent(typeof(ClickControl))]
-    public class Clickable : MonoBehaviour
+    public class ClickEventDelegator : MonoBehaviour
     {
         private ClickControl _clickControl;
 
@@ -22,7 +22,7 @@ namespace Assets.HotSpot
 
         private void Initialize()
         {
-            _clickControl = this.gameObject.GetComponent<ClickControl>();
+            _clickControl = this.GetComponent<ClickControl>();
         }
 
         /// <summary>
@@ -33,6 +33,7 @@ namespace Assets.HotSpot
             IClickable thing = null;
             if(_clickControl.ValidPoint)
                 thing = _clickControl.ThingHovered.GetComponent<IClickable>();
+               
             if (thing != null)
             {
                 thing.HoverReaction();

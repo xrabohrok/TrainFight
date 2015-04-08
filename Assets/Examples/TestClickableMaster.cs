@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace Assets.Examples
 {
-    [RequireComponent(typeof(Clickable))]
+    [RequireComponent(typeof(ClickEventDelegator))]
     public class TestClickableMaster : MonoBehaviour
     {
 
-        private Clickable _slaveDriver;
+        private ClickEventDelegator _slaveDriver;
 
         // Use this for initialization
         public void Start ()
         {
-            _slaveDriver = this.gameObject.GetComponent<Clickable>();
+            _slaveDriver = this.gameObject.GetComponent<ClickEventDelegator>();
             if (_slaveDriver == null)
                 throw new System.NullReferenceException();
         }

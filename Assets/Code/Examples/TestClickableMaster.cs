@@ -1,7 +1,7 @@
-﻿using Assets.HotSpot;
+﻿using Assets.Code.Clickable;
 using UnityEngine;
 
-namespace Assets.Examples
+namespace Assets.Code.Examples
 {
     [RequireComponent(typeof(ClickEventDelegator))]
     public class TestClickableMaster : MonoBehaviour

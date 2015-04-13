@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.ZoneKeeper
+namespace Assets.Code.ZoneKeeper
 {
     public class Zone : MonoBehaviour
     {

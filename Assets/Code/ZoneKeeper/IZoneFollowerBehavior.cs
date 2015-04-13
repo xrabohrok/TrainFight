@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.ZoneKeeper
+namespace Assets.Code.ZoneKeeper
 {
     interface IZoneFollowerBehavior
     {

@@ -1,8 +1,9 @@
-﻿using Assets.Helpers;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Assets.Code.Helpers;
+using Assets.HotSpot;
 using UnityEngine;
 
-namespace Assets.HotSpot
+namespace Assets.Code.Clickable
 {
     /// <summary>
     /// Composite me into master controllers.  Remember to set the Input button names

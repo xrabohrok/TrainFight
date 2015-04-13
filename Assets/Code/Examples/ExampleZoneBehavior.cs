@@ -1,6 +1,7 @@
+using Assets.Code.ZoneKeeper;
 using UnityEngine;
 
-namespace Assets.ZoneKeeper
+namespace Assets.Code.Examples
 {
     public class ExampleZoneBehavior : MonoBehaviour, IZoneFollowerBehavior
     {

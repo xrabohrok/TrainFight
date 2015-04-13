@@ -1,5 +1,4 @@
-﻿using Assets.HotSpot;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.ZoneKeeper
 {
@@ -7,7 +6,6 @@ namespace Assets.ZoneKeeper
     {
 
         public GameObject CurrentZone;
-        public ClickEventDelegator ClickEventDelegator;
         public float DistanceVariations = 1f;
 
         private Zone _attachedZone;
@@ -22,7 +20,6 @@ namespace Assets.ZoneKeeper
                 if (_attachedZone == null)
                     CurrentZone = null;
             }
-            ClickEventDelegator = GetComponent<ClickEventDelegator>();
             _behaviors = GetComponent<IZoneFollowerBehavior>();
         }
 	

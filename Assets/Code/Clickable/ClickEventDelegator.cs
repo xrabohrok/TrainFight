@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Assets.Code.Helpers;
-using Assets.HotSpot;
 using UnityEngine;
 
 namespace Assets.Code.Clickable

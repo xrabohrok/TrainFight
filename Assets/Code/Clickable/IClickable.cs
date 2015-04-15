@@ -1,4 +1,4 @@
-﻿namespace Assets.HotSpot
+﻿namespace Assets.Code.Clickable
 {
     public interface IClickable
     {

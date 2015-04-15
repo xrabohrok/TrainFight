@@ -1,4 +1,4 @@
-﻿using Assets.HotSpot;
+﻿using Assets.Code.Clickable;
 using UnityEngine;
 
 namespace Assets.Code.Examples

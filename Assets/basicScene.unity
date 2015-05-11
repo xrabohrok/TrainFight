@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5790aa5d5d6fd784abf6d2864b4e32d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterName: soldierMaster
+  MasterName: masterController
   Neighbors:
   - {fileID: 1924915595}
   Guards:
@@ -176,8 +176,9 @@ GameObject:
   - 114: {fileID: 682430081}
   - 114: {fileID: 682430080}
   - 114: {fileID: 682430078}
+  - 114: {fileID: 682430082}
   m_Layer: 0
-  m_Name: masterClick
+  m_Name: masterController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputVirtualButtonNames:
-  - '"Fire1"'
+  - Fire1
 --- !u!114 &682430081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +233,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LimitToLayerNamed:
   - Default
+--- !u!114 &682430082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682430077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275297a2302339440b7f335d05ebbc1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &695226943
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5790aa5d5d6fd784abf6d2864b4e32d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterName: soldierMaster
+  MasterName: masterController
   Neighbors:
   - {fileID: 548994042}
   Guards:
@@ -456,6 +468,7 @@ GameObject:
   - 143: {fileID: 1934235615}
   - 114: {fileID: 1934235619}
   - 114: {fileID: 1934235620}
+  - 114: {fileID: 1934235621}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -534,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1dc738518260d46b4525385663d72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentZone: {fileID: 0}
+  CurrentZone: {fileID: 1924915594}
   DistanceVariations: 1
 --- !u!114 &1934235620
 MonoBehaviour:
@@ -547,6 +560,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7ddeae8a52d644da884f2bd945ab9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1934235621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934235614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e68f32fd5460b54da79132e65e1ade3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MasterName: masterController
 --- !u!1 &2024019663
 GameObject:
   m_ObjectHideFlags: 0

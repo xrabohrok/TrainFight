@@ -2,6 +2,8 @@
 
 namespace Assets.Code.ZoneKeeper
 {
+
+    //Zone moving state machine should go here
     public class ZoneFollower : MonoBehaviour
     {
 
@@ -14,23 +16,26 @@ namespace Assets.Code.ZoneKeeper
         // Use this for initialization
         public void Start ()
         {
-            if(CurrentZone != null)
-            {
-                _attachedZone = CurrentZone.GetComponent<Zone>();
-                if (_attachedZone == null)
-                    CurrentZone = null;
-            }
+            _attachedZone = CurrentZone.GetComponent<Zone>();          
             _behaviors = GetComponent<IZoneFollowerBehavior>();
+        }
+
+        public void SetHome(Zone newZone)
+        {
+            if (newZone.JoinZone(this) != null)
+            {
+                _attachedZone = newZone;
+            }
         }
 	
         public void Update ()
         {
             var here = this.gameObject.transform.position;
-            var position = _attachedZone.gameObject.transform.position;
-            var distance = Vector3.Distance(here, position);
+            var destination = _attachedZone.gameObject.transform.position;
+            var distance = Vector3.Distance(here, destination);
             if (distance > DistanceVariations)
             {
-                var lookAtPost = new Vector3(position.x, here.y, position.z);
+                var lookAtPost = new Vector3(destination.x, here.y, destination.z);
                 _behaviors.AwayFromZone(lookAtPost, this);
             }
         }

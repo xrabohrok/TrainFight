@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Assets.Code.Clickable;
 using Assets.Soldiers;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Assets.Code.ZoneKeeper
@@ -33,7 +32,7 @@ namespace Assets.Code.ZoneKeeper
 	
         }
 
-        public Vector3? WhereAmI(ZoneFollower immigrant)
+        public Vector3? JoinZone(ZoneFollower immigrant)
         {
             if (Guards.Count < MaxOccupants)
             {

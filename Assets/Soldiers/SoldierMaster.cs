@@ -24,7 +24,6 @@ namespace Assets.Soldiers
         public void Update () {
             //give soldiers a way to report progress
 	        _slaveDriver.Update();
-
         }
 
         public void ReportClick(SoldierBase soldierBase)
@@ -39,7 +38,7 @@ namespace Assets.Soldiers
         {
             foreach (var selectedSoldier in _selectedSoldiers)
             {
-                selectedSoldier.goToZone(clickedZone.WhereAmI(selectedSoldier.));
+                selectedSoldier.MoveOrders(clickedZone);
             }
         }
     }

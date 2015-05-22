@@ -98,6 +98,7 @@ GameObject:
   - 33: {fileID: 548994044}
   - 23: {fileID: 548994043}
   - 114: {fileID: 548994042}
+  - 65: {fileID: 548994046}
   m_Layer: 8
   m_Name: Hotspot2
   m_TagString: Untagged
@@ -160,11 +161,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 548994041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .550000012, y: .370000005, z: -1.45000005}
-  m_LocalScale: {x: 2.26495838, y: .0494003184, z: 2.26495934}
+  m_LocalPosition: {x: .550000012, y: .330000013, z: -1.45000005}
+  m_LocalScale: {x: 2.26495838, y: .0850140229, z: 2.26495934}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &548994046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548994041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00000012, y: 1.99999988, z: 1.00000024}
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
 --- !u!1 &682430077
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +188,6 @@ GameObject:
   - 4: {fileID: 682430079}
   - 114: {fileID: 682430081}
   - 114: {fileID: 682430080}
-  - 114: {fileID: 682430078}
   - 114: {fileID: 682430082}
   m_Layer: 0
   m_Name: masterController
@@ -184,17 +196,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &682430078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 682430077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1969cbf4e468d4cac4d4f768cc465c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &682430079
 Transform:
   m_ObjectHideFlags: 0
@@ -233,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LimitToLayerNamed:
   - Default
+  - zones
 --- !u!114 &682430082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +390,7 @@ GameObject:
   - 33: {fileID: 1924915597}
   - 23: {fileID: 1924915596}
   - 114: {fileID: 1924915595}
+  - 65: {fileID: 1924915599}
   m_Layer: 8
   m_Name: Hotspot1
   m_TagString: Untagged
@@ -450,11 +453,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1924915594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .549999952, y: .369999886, z: -5.78999996}
-  m_LocalScale: {x: 2.26495838, y: .0494003184, z: 2.26495934}
+  m_LocalPosition: {x: .550000012, y: .330000013, z: -5.78999996}
+  m_LocalScale: {x: 2.26495838, y: .0850140229, z: 2.26495934}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!65 &1924915599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924915594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00000012, y: 1.99999988, z: 1.00000024}
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
 --- !u!1 &1934235614
 GameObject:
   m_ObjectHideFlags: 0

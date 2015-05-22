@@ -53,5 +53,10 @@ namespace Assets.Code.ZoneKeeper
             _soldierMaster.ReportClick(this);
             Debug.Log("Zone Clicked!");
         }
+
+        public void LeaveZone(ZoneFollower zoneFollower)
+        {
+            Guards.Remove(zoneFollower);
+        }
     }
 }

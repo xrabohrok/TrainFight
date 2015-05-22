@@ -22,6 +22,10 @@ namespace Assets.Code.ZoneKeeper
 
         public void SetHome(Zone newZone)
         {
+            if (_attachedZone != null)
+            {
+                _attachedZone.LeaveZone(this);
+            }
             if (newZone.JoinZone(this) != null)
             {
                 _attachedZone = newZone;

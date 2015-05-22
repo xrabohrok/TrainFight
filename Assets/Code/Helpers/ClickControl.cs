@@ -11,27 +11,27 @@ namespace Assets.Code.Helpers
         public List<string> LimitToLayerNamed;
 
         bool _valid = false;
+        private int _layerMask;
 
         public void Start()
         {
+            //limit to certain layers
+            _layerMask = 0;
+            foreach (var layername in LimitToLayerNamed)
+            {
+                var layermaskNum = LayerMask.NameToLayer(layername);
+                Debug.Log(string.Format("Layer {0} matched to {1}", layername, layermaskNum));
+                _layerMask |= 1 << layermaskNum;
+                Debug.Log(string.Format("Final layer mask: {0}", _layerMask));
+            }
         }
 
-        // Update is called once per frame
         public void Update()
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit infoOut;
 
-            //limit to one layer
-            var layerMask = 0;
-            foreach (var layername in LimitToLayerNamed)
-            {
-                var layermaskNum = LayerMask.NameToLayer(layername);
-                layerMask |= 1 << layermaskNum;
-            }
-
-
-            if (Physics.Raycast(ray, out infoOut, 500, layerMask))
+            if (Physics.Raycast(ray, out infoOut, 500, _layerMask))
             {
                 LastGoodPoint = infoOut.point;
                 ThingHovered = infoOut.collider.gameObject;

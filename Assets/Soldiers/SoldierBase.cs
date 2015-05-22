@@ -22,7 +22,7 @@ namespace Assets.Soldiers
         {
             _master = GameObject.Find(MasterName);
             _soldierMaster = _master.GetComponent<SoldierMaster>();
-            _zoner = _master.GetComponent<ZoneFollower>();
+            _zoner = GetComponent<ZoneFollower>();
         }
 	
         // Update is called once per frame

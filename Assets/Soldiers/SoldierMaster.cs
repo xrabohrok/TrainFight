@@ -31,6 +31,7 @@ namespace Assets.Soldiers
             if (!_selectedSoldiers.Contains(soldierBase))
             {
                 _selectedSoldiers.Add(soldierBase);
+                Debug.Log("Soldier added");
             }
         }
 
@@ -39,6 +40,7 @@ namespace Assets.Soldiers
             foreach (var selectedSoldier in _selectedSoldiers)
             {
                 selectedSoldier.MoveOrders(clickedZone);
+                Debug.Log("Soldier Moved!");
             }
         }
     }

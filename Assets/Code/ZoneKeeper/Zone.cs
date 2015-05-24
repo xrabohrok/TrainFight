@@ -51,7 +51,6 @@ namespace Assets.Code.ZoneKeeper
         public void ClickReaction()
         {
             _soldierMaster.ReportClick(this);
-            Debug.Log("Zone Clicked!");
         }
 
         public void LeaveZone(ZoneFollower zoneFollower)

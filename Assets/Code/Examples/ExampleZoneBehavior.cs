@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Assets.Code.Examples
 {
+    [RequireComponent(typeof(CharacterController))]
     public class ExampleZoneBehavior : MonoBehaviour, IZoneFollowerBehavior
     {
         private CharacterController _mover;
-        private Vector3 baseSpeed = new Vector3(1,0,0);
+        private float _baseSpeed = 1f;
 
         public void Start()
         {
@@ -14,9 +15,8 @@ namespace Assets.Code.Examples
         }
         public void AwayFromZone(Vector3 zonePosition, ZoneFollower me)
         {
-            Debug.Log("Behavior Activated");
             me.gameObject.transform.LookAt(zonePosition, Vector3.up);
-            _mover.Move(baseSpeed);
+            _mover.Move((zonePosition - me.gameObject.transform.position).normalized * _baseSpeed);
         }
     }
 }
